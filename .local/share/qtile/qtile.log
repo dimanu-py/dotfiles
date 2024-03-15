@@ -1,0 +1,136 @@
+2024-03-09 21:46:14,980 WARNING libqtile sleep.py:start():L86 dbus-next is not installed. Cannot run inhibitor process.
+2024-03-09 21:46:14,984 ERROR libqtile net.py:poll():L156 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/libqtile/widget/net.py", line 131, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+           ~~~~~~~~~^^^^^^
+KeyError: 'wlo1'
+2024-03-09 21:46:15,022 WARNING libqtile base.py:on_done():L858 net's poll() returned None, not rescheduling
+2024-03-10 22:44:07,657 WARNING libqtile core.py:graceful_shutdown():L908 Server disconnected, couldn't close windows gracefully.
+2024-03-10 22:44:07,669 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-03-15 20:00:24,932 ERROR libqtile hook.py:fire():L193 Error in hook client_new
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/libqtile/hook.py", line 191, in fire
+    i(*args, **kwargs)
+  File "/usr/lib/python3.11/site-packages/libqtile/dgroups.py", line 208, in _add
+    current_group = self.qtile.current_group.name
+                    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/libqtile/command/base.py", line 281, in __getattr__
+    raise AttributeError(f"{self.__class__} has no attribute {name}")
+AttributeError: <class 'libqtile.core.manager.Qtile'> has no attribute current_group
+2024-03-15 20:00:24,933 ERROR libqtile core.py:_xpoll():L370 Got an exception in poll loop
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/libqtile/backend/x11/core.py", line 345, in _xpoll
+    self.handle_event(event)
+  File "/usr/lib/python3.11/site-packages/libqtile/backend/x11/core.py", line 312, in handle_event
+    ret = target(event)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/libqtile/backend/x11/core.py", line 767, in handle_MapRequest
+    self.qtile.manage(win)
+  File "/usr/lib/python3.11/site-packages/libqtile/core/manager.py", line 696, in manage
+    if self.current_screen and isinstance(win, base.Window):
+       ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/libqtile/command/base.py", line 281, in __getattr__
+    raise AttributeError(f"{self.__class__} has no attribute {name}")
+AttributeError: <class 'libqtile.core.manager.Qtile'> has no attribute current_screen
+2024-03-15 20:00:25,027 WARNING libqtile sleep.py:start():L86 dbus-next is not installed. Cannot run inhibitor process.
+2024-03-15 20:00:25,036 ERROR libqtile net.py:poll():L156 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/libqtile/widget/net.py", line 131, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+           ~~~~~~~~~^^^^^^
+KeyError: 'wlo1'
+2024-03-15 20:00:25,060 WARNING libqtile base.py:on_done():L858 net's poll() returned None, not rescheduling
+2024-03-15 20:18:46,861 WARNING libqtile core.py:graceful_shutdown():L908 Server disconnected, couldn't close windows gracefully.
+2024-03-15 20:18:46,864 WARNING libqtile core.py:graceful_shutdown():L908 Server disconnected, couldn't close windows gracefully.
+2024-03-15 20:18:46,868 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-03-15 20:19:17,900 WARNING libqtile sleep.py:start():L86 dbus-next is not installed. Cannot run inhibitor process.
+2024-03-15 20:19:17,903 ERROR libqtile net.py:poll():L156 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/libqtile/widget/net.py", line 131, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+           ~~~~~~~~~^^^^^^
+KeyError: 'wlo1'
+2024-03-15 20:19:17,923 WARNING libqtile base.py:on_done():L858 net's poll() returned None, not rescheduling
+2024-03-15 20:20:15,590 ERROR libqtile loop.py:_handle_exception():L62 Exception in event loop:
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/xcffib/__init__.py", line 579, in wrapper
+    return f(*args)
+           ^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/xcffib/__init__.py", line 689, in request_check
+    self._process_error(err)
+  File "/usr/lib/python3.11/site-packages/xcffib/__init__.py", line 653, in _process_error
+    self.invalid()
+  File "/usr/lib/python3.11/site-packages/xcffib/__init__.py", line 567, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/lib/python3.11/site-packages/libqtile/core/manager.py", line 940, in f
+    func(*args)
+  File "/usr/lib/python3.11/site-packages/libqtile/bar.py", line 686, in _actual_draw
+    i.draw()
+  File "/usr/lib/python3.11/site-packages/libqtile/widget/systray.py", line 260, in draw
+    icon.place(xoffset, yoffset, icon.width, self.icon_size, 0, None)
+  File "/usr/lib/python3.11/site-packages/libqtile/backend/x11/window.py", line 915, in place
+    self.paint_borders(bordercolor, borderwidth)
+  File "/usr/lib/python3.11/site-packages/libqtile/backend/x11/window.py", line 1218, in paint_borders
+    self.window.paint_borders(self.depth, color, width, self.width, self.height)
+  File "/usr/lib/python3.11/site-packages/libqtile/backend/x11/window.py", line 422, in paint_borders
+    self.set_property("_NET_FRAME_EXTENTS", [borderwidth] * 4)
+  File "/usr/lib/python3.11/site-packages/libqtile/backend/x11/window.py", line 358, in set_property
+    ).check()
+      ^^^^^^^
+  File "/usr/lib/python3.11/site-packages/xcffib/__init__.py", line 337, in check
+    self.conn.request_check(self.sequence)
+  File "/usr/lib/python3.11/site-packages/xcffib/__init__.py", line 581, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.11/site-packages/xcffib/__init__.py", line 567, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2024-03-15 20:20:15,593 ERROR libqtile loop.py:_handle_exception():L62 Exception in event loop:
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/asyncio/events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "/usr/lib/python3.11/site-packages/libqtile/core/manager.py", line 959, in f
+    self.core.flush()
+  File "/usr/lib/python3.11/site-packages/libqtile/backend/x11/core.py", line 896, in flush
+    self.conn.flush()
+  File "/usr/lib/python3.11/site-packages/libqtile/backend/x11/xcbq.py", line 613, in flush
+    return self.conn.flush()
+           ^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/site-packages/xcffib/__init__.py", line 577, in wrapper
+    self.invalid()
+  File "/usr/lib/python3.11/site-packages/xcffib/__init__.py", line 567, in invalid
+    raise ConnectionException(err)
+xcffib.ConnectionException: xcb connection errors because of socket, pipe and other stream errors.
+2024-03-15 20:20:15,594 WARNING libqtile core.py:_xpoll():L366 Shutting down due to disconnection from X server
+2024-03-15 20:20:15,594 WARNING libqtile core.py:graceful_shutdown():L908 Server disconnected, couldn't close windows gracefully.
+2024-03-15 20:20:15,597 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-03-15 20:20:21,798 WARNING libqtile sleep.py:start():L86 dbus-next is not installed. Cannot run inhibitor process.
+2024-03-15 20:20:21,800 ERROR libqtile net.py:poll():L156 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/libqtile/widget/net.py", line 131, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+           ~~~~~~~~~^^^^^^
+KeyError: 'wlo1'
+2024-03-15 20:20:21,825 WARNING libqtile base.py:on_done():L858 net's poll() returned None, not rescheduling
+2024-03-15 20:23:43,462 ERROR libqtile manager.py:process_key_event():L454 KB command error kill: No object window in path 'window'
+2024-03-15 20:23:44,587 ERROR libqtile manager.py:process_key_event():L454 KB command error kill: No object window in path 'window'
+2024-03-15 20:23:47,247 ERROR libqtile manager.py:process_key_event():L454 KB command error kill: No object window in path 'window'
+2024-03-15 20:26:41,752 ERROR libqtile manager.py:process_key_event():L454 KB command error kill: No object window in path 'window'
+2024-03-15 20:26:43,670 ERROR libqtile manager.py:process_key_event():L454 KB command error kill: No object window in path 'window'
+2024-03-15 21:28:59,029 WARNING libqtile lifecycle.py:_atexit():L37 Qtile will now terminate
+2024-03-15 21:31:41,294 WARNING libqtile sleep.py:start():L86 dbus-next is not installed. Cannot run inhibitor process.
+2024-03-15 21:31:41,296 ERROR libqtile net.py:poll():L156 Net widget errored while polling:
+Traceback (most recent call last):
+  File "/usr/lib/python3.11/site-packages/libqtile/widget/net.py", line 131, in poll
+    down = new_stats[intf]["down"] - self.stats[intf]["down"]
+           ~~~~~~~~~^^^^^^
+KeyError: 'wlo1'
+2024-03-15 21:31:41,319 WARNING libqtile base.py:on_done():L858 net's poll() returned None, not rescheduling
+2024-03-15 21:38:58,274 ERROR libqtile manager.py:process_key_event():L454 KB command error kill: No object window in path 'window'

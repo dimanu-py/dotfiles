@@ -1,0 +1,28 @@
+[ 15/03/24 21:31:39.617 parse_config_libconfig WARN ] The refresh-rate option has been deprecated. Please remove it from your configuration file. If you encounter any problems without this feature, please feel free to open a bug report
+[ 15/03/24 21:31:39.617 parse_blur_method WARN ] Blur method 'kawase' has been renamed to 'dual_kawase'. Interpreted as 'dual_kawase', but this will stop working soon.
+File does not exist: /home/dimanu/.config/autostart/arcolinux-welcome-app.desktop
+
+(nitrogen:2197): GLib-GObject-CRITICAL **: 21:31:39.771: Attempting to freeze the notification queue for object GtkSettings[0x55fdfaa0a850]; Property notification does not work during instance finalization.
+
+(nitrogen:2197): GLib-GObject-CRITICAL **: 21:31:39.771: Attempting to thaw the notification queue for object GtkSettings[0x55fdfaa0a850]; Property notification does not work during instance finalization.
+
+(xfce4-power-manager:2215): xfce4-power-manager-WARNING **: 21:31:40.713: Unable to connect to session manager : Failed to connect to the session manager: SESSION_MANAGER environment variable not defined
+
+(xfce4-power-manager:2215): xfce4-power-manager-WARNING **: 21:31:41.013: could not map keysym 1008ffa8 to keycode
+
+
+** (xfce4-power-manager:2215): WARNING **: 21:31:41.049: could not get output property
+xfce4-power-manager-Message: 21:31:41.092: Set kernel brightness switch to 0
+
+(xfce4-power-manager:2215): xfconf-WARNING **: 21:31:41.100: Failed to set property "xfce4-power-manager::/xfce4-power-manager/brightness-switch": Operation was cancelled
+xfce4-power-manager-Message: 21:31:41.128: Set kernel brightness switch to 0
+File does not exist: /home/dimanu/.config/autostart/arcolinux-welcome-app.desktop
+
+** (volumeicon:2212): WARNING **: 21:31:42.409: Binding 'AudioRaiseVolume' failed!
+Failed to bind AudioRaiseVolume
+
+** (volumeicon:2212): WARNING **: 21:31:42.409: Binding 'AudioLowerVolume' failed!
+Failed to bind AudioLowerVolume
+
+** (volumeicon:2212): WARNING **: 21:31:42.409: Binding 'AudioMute' failed!
+Failed to bind AudioMute

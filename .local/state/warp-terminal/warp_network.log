@@ -1,0 +1,658 @@
+[2024-03-15 23:54:02,575]: Response { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("api.segment.io")), port: None, path: "/v1/batch", query: None, fragment: None }, status: 200, headers: {"date": "Fri, 15 Mar 2024 22:54:02 GMT", "content-type": "application/json", "content-length": "21", "strict-transport-security": "max-age=31536000", "vary": "Origin"} }
+[2024-03-15 23:55:32,577]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("api.segment.io")), port: None, path: "/v1/batch", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "authorization": Sensitive, "content-type": "application/json"} }
+Body {
+  "batch": [
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Block Creation",
+      "properties": {
+        "payload": {
+          "block_finished_to_precmd_delay_ms": 26,
+          "honor_ps1_enabled": false,
+          "num_secrets_redacted": 0
+        },
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T22:55:11.068087815Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710542959
+        }
+      }
+    }
+  ],
+  "context": {
+    "os": {
+      "category": "Linux",
+      "linux_kernel_version": "6.6.1-arch1-1",
+      "name": "ArcoLinux"
+    }
+  }
+}
+[2024-03-15 23:55:33,539]: Response { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("api.segment.io")), port: None, path: "/v1/batch", query: None, fragment: None }, status: 200, headers: {"date": "Fri, 15 Mar 2024 22:55:33 GMT", "content-type": "application/json", "content-length": "21", "strict-transport-security": "max-age=31536000", "vary": "Origin"} }
+[2024-03-15 23:57:03,616]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("securetoken.googleapis.com")), port: None, path: "/v1/token", query: Some("key=AIzaSyBdy3O3S9hrdayLJxJ7mriBR4qgUaUygAs"), fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/x-www-form-urlencoded"} }
+Body grant_type=refresh_token&refresh_token=AMf-vBx5qEUFd4SPnVThjORLJrLXTG9FkhlqxHYgWebcijgOSHW89iKsXS2-MKuhjTyjD4ZJd_jOnh5voP5vbKh4QZe4EaONokZr6Km7-WSXnfygll8nVv8DnNWc0_SPkKRFOV9iNMJRjwEr-yg6XnCHG2Awo3nBg9s-nO6aAjFOHuBKWkZepBOwjVCqiyQUyBtNnqQ-5az2SYQztmaawMG1WKe4n9OG9eQqdSM70jrvaP-cUZmqWfMtoL4JBVjr5D4QzothEEjm_xH6nnLl1sfmnvgW18h0neK-YiTL5JeGMxrstMoHnAjTDVkXo6wmXESEbniAequTlCvmvLr8CIe3fBdLs0lXxoIsh-F-zMzN2dF__QTZFY4
+[2024-03-15 23:57:03,826]: Response { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("securetoken.googleapis.com")), port: None, path: "/v1/token", query: Some("key=AIzaSyBdy3O3S9hrdayLJxJ7mriBR4qgUaUygAs"), fragment: None }, status: 200, headers: {"pragma": "no-cache", "expires": "Mon, 01 Jan 1990 00:00:00 GMT", "date": "Fri, 15 Mar 2024 22:57:03 GMT", "cache-control": "no-cache, no-store, max-age=0, must-revalidate", "content-type": "application/json; charset=UTF-8", "vary": "Origin", "vary": "X-Origin", "vary": "Referer", "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000", "server": "ESF", "x-content-type-options": "nosniff", "x-xss-protection": "0", "x-frame-options": "SAMEORIGIN"} }
+[2024-03-15 23:57:03,826]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/json", "authorization": Sensitive} }
+Body {
+  "variables": {
+    "input": {
+      "notebook": [],
+      "workflow": [
+        {
+          "objectId": "zSpG29MQlrQVddoPnB3adH",
+          "objectUid": "zSpG29MQlrQVddoPnB3adH",
+          "revision": {
+            "revisionTs": "2023-12-09T16:06:04.518494Z"
+          },
+          "metadata_ts": "2023-12-09T16:06:04.518494Z",
+          "permissions_ts": "2023-12-09T16:06:04.518494Z",
+          "actions_ts": null
+        },
+        {
+          "objectId": "2jEzcp6JgwwS1G2UrALwKZ",
+          "objectUid": "2jEzcp6JgwwS1G2UrALwKZ",
+          "revision": {
+            "revisionTs": "2023-12-09T16:06:04.473565Z"
+          },
+          "metadata_ts": "2023-12-09T16:06:04.473565Z",
+          "permissions_ts": "2023-12-09T16:06:04.473565Z",
+          "actions_ts": null
+        },
+        {
+          "objectId": "NChEmyW4KXX1ux5b3E0Pnz",
+          "objectUid": "NChEmyW4KXX1ux5b3E0Pnz",
+          "revision": {
+            "revisionTs": "2023-12-09T16:06:04.613488Z"
+          },
+          "metadata_ts": "2023-12-09T16:06:04.613488Z",
+          "permissions_ts": "2023-12-09T16:06:04.613488Z",
+          "actions_ts": "2023-12-09T16:19:42.518972Z"
+        },
+        {
+          "objectId": "w2NyqSzM6eJNUDaXfT4j3t",
+          "objectUid": "w2NyqSzM6eJNUDaXfT4j3t",
+          "revision": {
+            "revisionTs": "2023-12-09T16:06:04.560422Z"
+          },
+          "metadata_ts": "2023-12-09T16:06:04.560422Z",
+          "permissions_ts": "2023-12-09T16:06:04.560422Z",
+          "actions_ts": null
+        }
+      ],
+      "folder": [
+        {
+          "objectId": "enGUW6zorFWOJu9rcETkLx",
+          "objectUid": "enGUW6zorFWOJu9rcETkLx",
+          "revision": {
+            "revisionTs": "2023-12-09T16:06:04.437090Z"
+          },
+          "metadata_ts": "2023-12-09T16:06:04.437090Z",
+          "permissions_ts": "2023-12-09T16:06:04.437090Z",
+          "actions_ts": null
+        }
+      ],
+      "genericStringObject": [],
+      "forceRefresh": false
+    }
+  },
+  "query": "fragment MetadataFields on ObjectMetadata {\n  UID\n  currentEditor {\n    email\n  }\n  metadataLastUpdatedTs\n  lastEditedBy {\n    firebase_uid\n  }\n  revision {\n    revisionTs\n  }\n  trashedTs\n  folderUid\n  isWelcomeObject\n  creator {\n    firebase_uid\n  }\n}\n\nfragment PermissionsFields on ObjectPermissions {\n  space {\n    id\n    type\n  }\n  permissionsLastUpdatedTs\n}\n\nquery GetUpdatedCloudObjects($input: GetUpdatedCloudObjectsInput!) {\n  getUpdatedCloudObjects(input: $input) {\n    notebooks {\n      titleName\n      data\n      metadata {\n        ...MetadataFields\n      }\n      permissions {\n        ...PermissionsFields\n      }\n    }\n    workflows {\n      data\n      metadata {\n        ...MetadataFields\n      }\n      permissions {\n        ...PermissionsFields\n      }\n    }\n    folders {\n      name\n      metadata {\n        ...MetadataFields\n      }\n      permissions {\n        ...PermissionsFields\n      }\n    }\n    genericStringObjects {\n      serializedModel\n      format\n      metadata {\n        ...MetadataFields\n      }\n      permissions {\n        ...PermissionsFields\n      }\n    }\n    deletedObjectIds {\n      notebooks\n      notebookUIDs\n      workflows\n      workflowUIDs\n      folderUIDs\n      genericStringObjectUIDs\n    }\n    userProfiles {\n      email\n      display_name\n      photo_url\n      firebase_uid\n    }\n    actionHistories {\n      uid\n      objectType\n      actions {\n        __typename\n        ... on SingleAction {\n          actionType\n          timestamp\n          processedAtTimestamp\n        }\n        ... on BundledActions {\n          actionType\n          count\n          oldestTimestamp\n          latestTimestamp\n          latestProcessedAtTimestamp\n        }\n      }\n      latestProcessedAtTimestamp\n    }\n  }\n}\n",
+  "operationName": "GetUpdatedCloudObjects"
+}
+[2024-03-15 23:57:04,081]: Response { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, status: 200, headers: {"content-type": "application/json", "set-cookie": "ajs_anonymous_id=92882b98-619c-4e7f-b1bd-e16f6dd79b5c; Path=/; Max-Age=31536000", "x-frame-options": "DENY", "date": "Fri, 15 Mar 2024 22:57:04 GMT", "server": "Google Frontend", "via": "1.1 google", "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"} }
+[2024-03-15 23:57:11,081]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/json", "authorization": Sensitive} }
+Body {
+  "variables": null,
+  "query": "query GetTeamsMetadataForUser {\n  user {\n    teams {\n      id\n      uid\n      name\n      creatorId\n      inviteCode {\n        id\n        code\n      }\n      members {\n        id\n        email\n      }\n      pendingEmailInvites {\n        code\n        inviteeEmail\n        createdAt\n        expired\n      }\n      approvedDomains\n      inviteLinkDomainRestrictions {\n        uid\n        domain\n      }\n      isInviteLinkEnabled\n      billingMetadata {\n        customerType\n        delinquencyStatus\n        tier {\n          name\n          description\n          warpAiPolicy {\n            limit\n          }\n          teamSizePolicy {\n            isUnlimited\n            limit\n          }\n          sharedNotebooksPolicy {\n            isUnlimited\n            limit\n          }\n          sharedWorkflowsPolicy {\n            isUnlimited\n            limit\n          }\n        }\n      }\n      stripeCustomerId\n    }\n\n    # We're temporarily piggy-backing off of the polled teams metadata\n    # query to also query experiment state.\n    experiments\n  }\n}\n",
+  "operationName": "GetTeamsMetadataForUser"
+}
+[2024-03-15 23:57:11,194]: Response { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, status: 200, headers: {"content-type": "application/json", "set-cookie": "ajs_anonymous_id=da43b2a7-a119-4ef1-91c4-cf0eef039436; Path=/; Max-Age=31536000", "x-frame-options": "DENY", "x-cloud-trace-context": "8af065fbb5504165096529aa9ad6681e", "date": "Fri, 15 Mar 2024 22:57:11 GMT", "server": "Google Frontend", "content-length": "72", "via": "1.1 google", "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"} }
+[2024-03-16 00:03:55,326]: Request { method: GET, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/client_version/daily", query: Some("include_changelogs=false"), fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "authorization": Sensitive} }
+[2024-03-16 00:03:55,513]: Response { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/client_version/daily", query: Some("include_changelogs=false"), fragment: None }, status: 200, headers: {"content-type": "application/json", "set-cookie": "ajs_anonymous_id=152788b2-6323-4383-a987-478e404165af; Path=/; Max-Age=31536000", "x-frame-options": "DENY", "x-cloud-trace-context": "a53e265e442c46a530199b0e10288bf2", "date": "Fri, 15 Mar 2024 23:03:55 GMT", "server": "Google Frontend", "content-length": "426", "via": "1.1 google", "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"} }
+[2024-03-16 00:07:22,734]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/json", "authorization": Sensitive} }
+Body {
+  "variables": {
+    "input": {
+      "notebook": [],
+      "workflow": [
+        {
+          "objectId": "zSpG29MQlrQVddoPnB3adH",
+          "objectUid": "zSpG29MQlrQVddoPnB3adH",
+          "revision": {
+            "revisionTs": "2023-12-09T16:06:04.518494Z"
+          },
+          "metadata_ts": "2023-12-09T16:06:04.518494Z",
+          "permissions_ts": "2023-12-09T16:06:04.518494Z",
+          "actions_ts": null
+        },
+        {
+          "objectId": "2jEzcp6JgwwS1G2UrALwKZ",
+          "objectUid": "2jEzcp6JgwwS1G2UrALwKZ",
+          "revision": {
+            "revisionTs": "2023-12-09T16:06:04.473565Z"
+          },
+          "metadata_ts": "2023-12-09T16:06:04.473565Z",
+          "permissions_ts": "2023-12-09T16:06:04.473565Z",
+          "actions_ts": null
+        },
+        {
+          "objectId": "NChEmyW4KXX1ux5b3E0Pnz",
+          "objectUid": "NChEmyW4KXX1ux5b3E0Pnz",
+          "revision": {
+            "revisionTs": "2023-12-09T16:06:04.613488Z"
+          },
+          "metadata_ts": "2023-12-09T16:06:04.613488Z",
+          "permissions_ts": "2023-12-09T16:06:04.613488Z",
+          "actions_ts": "2023-12-09T16:19:42.518972Z"
+        },
+        {
+          "objectId": "w2NyqSzM6eJNUDaXfT4j3t",
+          "objectUid": "w2NyqSzM6eJNUDaXfT4j3t",
+          "revision": {
+            "revisionTs": "2023-12-09T16:06:04.560422Z"
+          },
+          "metadata_ts": "2023-12-09T16:06:04.560422Z",
+          "permissions_ts": "2023-12-09T16:06:04.560422Z",
+          "actions_ts": null
+        }
+      ],
+      "folder": [
+        {
+          "objectId": "enGUW6zorFWOJu9rcETkLx",
+          "objectUid": "enGUW6zorFWOJu9rcETkLx",
+          "revision": {
+            "revisionTs": "2023-12-09T16:06:04.437090Z"
+          },
+          "metadata_ts": "2023-12-09T16:06:04.437090Z",
+          "permissions_ts": "2023-12-09T16:06:04.437090Z",
+          "actions_ts": null
+        }
+      ],
+      "genericStringObject": [],
+      "forceRefresh": false
+    }
+  },
+  "query": "fragment MetadataFields on ObjectMetadata {\n  UID\n  currentEditor {\n    email\n  }\n  metadataLastUpdatedTs\n  lastEditedBy {\n    firebase_uid\n  }\n  revision {\n    revisionTs\n  }\n  trashedTs\n  folderUid\n  isWelcomeObject\n  creator {\n    firebase_uid\n  }\n}\n\nfragment PermissionsFields on ObjectPermissions {\n  space {\n    id\n    type\n  }\n  permissionsLastUpdatedTs\n}\n\nquery GetUpdatedCloudObjects($input: GetUpdatedCloudObjectsInput!) {\n  getUpdatedCloudObjects(input: $input) {\n    notebooks {\n      titleName\n      data\n      metadata {\n        ...MetadataFields\n      }\n      permissions {\n        ...PermissionsFields\n      }\n    }\n    workflows {\n      data\n      metadata {\n        ...MetadataFields\n      }\n      permissions {\n        ...PermissionsFields\n      }\n    }\n    folders {\n      name\n      metadata {\n        ...MetadataFields\n      }\n      permissions {\n        ...PermissionsFields\n      }\n    }\n    genericStringObjects {\n      serializedModel\n      format\n      metadata {\n        ...MetadataFields\n      }\n      permissions {\n        ...PermissionsFields\n      }\n    }\n    deletedObjectIds {\n      notebooks\n      notebookUIDs\n      workflows\n      workflowUIDs\n      folderUIDs\n      genericStringObjectUIDs\n    }\n    userProfiles {\n      email\n      display_name\n      photo_url\n      firebase_uid\n    }\n    actionHistories {\n      uid\n      objectType\n      actions {\n        __typename\n        ... on SingleAction {\n          actionType\n          timestamp\n          processedAtTimestamp\n        }\n        ... on BundledActions {\n          actionType\n          count\n          oldestTimestamp\n          latestTimestamp\n          latestProcessedAtTimestamp\n        }\n      }\n      latestProcessedAtTimestamp\n    }\n  }\n}\n",
+  "operationName": "GetUpdatedCloudObjects"
+}
+[2024-03-16 00:07:23,000]: Response { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, status: 200, headers: {"content-type": "application/json", "set-cookie": "ajs_anonymous_id=32de55e8-2606-4de4-9233-4c07c754407b; Path=/; Max-Age=31536000", "x-frame-options": "DENY", "date": "Fri, 15 Mar 2024 23:07:22 GMT", "server": "Google Frontend", "via": "1.1 google", "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"} }
+[2024-03-16 00:07:58,857]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/json", "authorization": Sensitive} }
+Body {
+  "variables": null,
+  "query": "query GetTeamsMetadataForUser {\n  user {\n    teams {\n      id\n      uid\n      name\n      creatorId\n      inviteCode {\n        id\n        code\n      }\n      members {\n        id\n        email\n      }\n      pendingEmailInvites {\n        code\n        inviteeEmail\n        createdAt\n        expired\n      }\n      approvedDomains\n      inviteLinkDomainRestrictions {\n        uid\n        domain\n      }\n      isInviteLinkEnabled\n      billingMetadata {\n        customerType\n        delinquencyStatus\n        tier {\n          name\n          description\n          warpAiPolicy {\n            limit\n          }\n          teamSizePolicy {\n            isUnlimited\n            limit\n          }\n          sharedNotebooksPolicy {\n            isUnlimited\n            limit\n          }\n          sharedWorkflowsPolicy {\n            isUnlimited\n            limit\n          }\n        }\n      }\n      stripeCustomerId\n    }\n\n    # We're temporarily piggy-backing off of the polled teams metadata\n    # query to also query experiment state.\n    experiments\n  }\n}\n",
+  "operationName": "GetTeamsMetadataForUser"
+}
+[2024-03-16 00:07:58,979]: Response { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, status: 200, headers: {"content-type": "application/json", "set-cookie": "ajs_anonymous_id=8b4adacd-b271-4946-95a4-d78497f5ecfd; Path=/; Max-Age=31536000", "x-frame-options": "DENY", "x-cloud-trace-context": "8b215f67081b8f142d2296b0a5f5be21", "date": "Fri, 15 Mar 2024 23:07:58 GMT", "server": "Google Frontend", "content-length": "72", "via": "1.1 google", "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"} }
+[2024-03-16 00:12:33,554]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("api.segment.io")), port: None, path: "/v1/batch", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "authorization": Sensitive, "content-type": "application/json"} }
+Body {
+  "batch": [
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:17.270713743Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:17.366579138Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:19.116389967Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:19.480328769Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:19.775270174Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:19.869453647Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:20.004226863Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:20.154259174Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:20.630371199Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:20.839388717Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:21.014175135Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:21.123349301Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:21.276337439Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:21.396532652Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:21.891649714Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:22.354431100Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:22.485281181Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:22.994231521Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:25.681336567Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Open Suggestions Menu",
+      "properties": {
+        "payload": "CompletionSuggestions",
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:25.820270441Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Tab Single Result Autocompletion",
+      "properties": {
+        "payload": null,
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:27.293605561Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Confirm Suggestion",
+      "properties": {
+        "payload": {
+          "match_type": {
+            "Prefix": {
+              "is_case_sensitive": true
+            }
+          },
+          "mode": "CompletionSuggestions"
+        },
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:27.293617993Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    },
+    {
+      "type": "track",
+      "userId": "hRmaGlW9xrNqdLmGvJ6DDoKVppf2",
+      "anonymousId": "d9b82674-7ed8-441f-97eb-f66aba7c6ad2",
+      "event": "Block Creation",
+      "properties": {
+        "payload": {
+          "block_finished_to_precmd_delay_ms": 26,
+          "honor_ps1_enabled": false,
+          "num_secrets_redacted": 0
+        },
+        "release_mode": "stable_release",
+        "tag": "v0.2024.03.12.08.02.stable_01"
+      },
+      "timestamp": "2024-03-15T23:12:28.846346943Z",
+      "integrations": {
+        "Amplitude": {
+          "session_id": 1710544337
+        }
+      }
+    }
+  ],
+  "context": {
+    "os": {
+      "category": "Linux",
+      "linux_kernel_version": "6.6.1-arch1-1",
+      "name": "ArcoLinux"
+    }
+  }
+}
+[2024-03-16 00:12:34,489]: Response { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("api.segment.io")), port: None, path: "/v1/batch", query: None, fragment: None }, status: 200, headers: {"date": "Fri, 15 Mar 2024 23:12:34 GMT", "content-type": "application/json", "content-length": "21", "strict-transport-security": "max-age=31536000", "vary": "Origin"} }
+[2024-03-16 00:12:35,005]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/json", "authorization": Sensitive} }
+Body {
+  "variables": {
+    "prompt": "remov",
+    "contextJson": "{\"os\":{\"category\":\"Linux\"},\"shell_name\":\"zsh\",\"shell_version\":\"5.9\"}"
+  },
+  "query": "query GenerateCommands($prompt: String!, $contextJson: String) {\n  generateCommands(input: { prompt: $prompt, contextJson: $contextJson }) {\n    __typename\n    ... on GenerateCommandsSuccess {\n      commands {\n        command\n        description\n        parameters {\n          id\n          description\n        }\n      }\n    }\n    ... on GenerateCommandsFailure {\n      type\n    }\n  }\n}\n",
+  "operationName": "GenerateCommands"
+}
+[2024-03-16 00:12:35,409]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/json", "authorization": Sensitive} }
+Body {
+  "variables": {
+    "prompt": "remove",
+    "contextJson": "{\"os\":{\"category\":\"Linux\"},\"shell_name\":\"zsh\",\"shell_version\":\"5.9\"}"
+  },
+  "query": "query GenerateCommands($prompt: String!, $contextJson: String) {\n  generateCommands(input: { prompt: $prompt, contextJson: $contextJson }) {\n    __typename\n    ... on GenerateCommandsSuccess {\n      commands {\n        command\n        description\n        parameters {\n          id\n          description\n        }\n      }\n    }\n    ... on GenerateCommandsFailure {\n      type\n    }\n  }\n}\n",
+  "operationName": "GenerateCommands"
+}
+[2024-03-16 00:12:36,310]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/json", "authorization": Sensitive} }
+Body {
+  "variables": {
+    "prompt": "remove zi",
+    "contextJson": "{\"os\":{\"category\":\"Linux\"},\"shell_name\":\"zsh\",\"shell_version\":\"5.9\"}"
+  },
+  "query": "query GenerateCommands($prompt: String!, $contextJson: String) {\n  generateCommands(input: { prompt: $prompt, contextJson: $contextJson }) {\n    __typename\n    ... on GenerateCommandsSuccess {\n      commands {\n        command\n        description\n        parameters {\n          id\n          description\n        }\n      }\n    }\n    ... on GenerateCommandsFailure {\n      type\n    }\n  }\n}\n",
+  "operationName": "GenerateCommands"
+}
+[2024-03-16 00:12:36,825]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/json", "authorization": Sensitive} }
+Body {
+  "variables": {
+    "prompt": "remove zip",
+    "contextJson": "{\"os\":{\"category\":\"Linux\"},\"shell_name\":\"zsh\",\"shell_version\":\"5.9\"}"
+  },
+  "query": "query GenerateCommands($prompt: String!, $contextJson: String) {\n  generateCommands(input: { prompt: $prompt, contextJson: $contextJson }) {\n    __typename\n    ... on GenerateCommandsSuccess {\n      commands {\n        command\n        description\n        parameters {\n          id\n          description\n        }\n      }\n    }\n    ... on GenerateCommandsFailure {\n      type\n    }\n  }\n}\n",
+  "operationName": "GenerateCommands"
+}
+[2024-03-16 00:12:37,147]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/json", "authorization": Sensitive} }
+Body {
+  "variables": {
+    "prompt": "remove zip fi",
+    "contextJson": "{\"os\":{\"category\":\"Linux\"},\"shell_name\":\"zsh\",\"shell_version\":\"5.9\"}"
+  },
+  "query": "query GenerateCommands($prompt: String!, $contextJson: String) {\n  generateCommands(input: { prompt: $prompt, contextJson: $contextJson }) {\n    __typename\n    ... on GenerateCommandsSuccess {\n      commands {\n        command\n        description\n        parameters {\n          id\n          description\n        }\n      }\n    }\n    ... on GenerateCommandsFailure {\n      type\n    }\n  }\n}\n",
+  "operationName": "GenerateCommands"
+}
+[2024-03-16 00:12:37,641]: Request { method: POST, url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, headers: {"x-warp-client-version": "v0.2024.03.12.08.02.stable_01", "content-type": "application/json", "authorization": Sensitive} }
+Body {
+  "variables": {
+    "prompt": "remove zip files",
+    "contextJson": "{\"os\":{\"category\":\"Linux\"},\"shell_name\":\"zsh\",\"shell_version\":\"5.9\"}"
+  },
+  "query": "query GenerateCommands($prompt: String!, $contextJson: String) {\n  generateCommands(input: { prompt: $prompt, contextJson: $contextJson }) {\n    __typename\n    ... on GenerateCommandsSuccess {\n      commands {\n        command\n        description\n        parameters {\n          id\n          description\n        }\n      }\n    }\n    ... on GenerateCommandsFailure {\n      type\n    }\n  }\n}\n",
+  "operationName": "GenerateCommands"
+}
+[2024-03-16 00:12:38,869]: Response { url: Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("app.warp.dev")), port: None, path: "/graphql", query: None, fragment: None }, status: 200, headers: {"content-type": "application/json", "set-cookie": "ajs_anonymous_id=5f0d6515-accf-49dd-9774-99e94d16cb9e; Path=/; Max-Age=31536000", "x-frame-options": "DENY", "x-cloud-trace-context": "af0a562df15a5e0ea4e2e6f02215a29f", "date": "Fri, 15 Mar 2024 23:12:38 GMT", "server": "Google Frontend", "content-length": "340", "via": "1.1 google", "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"} }
