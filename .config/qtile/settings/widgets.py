@@ -113,15 +113,11 @@ def primary_widgets():
 
         separator(),
 
-        powerline('color4', 'dark'),
+        powerline('color3', 'dark'),
 
-        widget.CurrentLayoutIcon(**base(bg='color4'), scale=0.65),
+        widget.CurrentLayoutIcon(**base(bg='color3'), scale=0.65),
 
-        widget.CurrentLayout(**base(bg='color4')),
-
-        powerline('color3', 'color4'),
-
-        widget.Battery(**base(bg='color3'), full_char=' ', empty_char=' ', charge_char=' ', discharge_char=' ', format='{char} {percent:2.0%}'),
+        widget.CurrentLayout(**base(bg='color3')),
 
         powerline('color2', 'color3'),
 

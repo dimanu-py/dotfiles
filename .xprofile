@@ -53,10 +53,15 @@ xfce4-power-manager &
 ## XFCE4 Settings
 #xfsettingsd &
 
+# Wifi icon
 (nm-applet) &
 
 ## Set monitor configuration and setup
 bash ~/Developer/monitor-setup/setup.sh
+
+## Battery icon
+cbatticon &
+
 #(plank) &
 
 #discord &
