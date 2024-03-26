@@ -6,7 +6,7 @@
 
 from libqtile.config import Key, Group
 from libqtile.command import lazy
-from .keys import mod, keys
+from .keys import keys
 
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
@@ -18,11 +18,11 @@ from .keys import mod, keys
 # nf-oct-git_merge, 
 # nf-linux-docker,
 # nf-mdi-image, 
-# nf-mdi-layers
+# nf-mdi-layers3
+mod = "mod1"
 
-groups = [Group(i) for i in [
-    "   ", "   ", "   ", "   ", "  ", "   ", "   ", "   ", "   ",
-]]
+icons = ["   ", "   ", "   ", " 󰰒 ", "  ", "   ", "   ", " 󱃲  ",]
+groups = [Group(icon) for icon in icons]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)

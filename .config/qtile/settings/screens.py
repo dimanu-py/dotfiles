@@ -14,7 +14,7 @@ from .widgets import primary_widgets, secondary_widgets
 
 
 def status_bar(widgets):
-    return bar.Bar(widgets, 24, opacity=1)
+    return bar.Bar(widgets, 24, opacity=0.7)
 
 
 screens = [Screen(top=status_bar(primary_widgets()))]

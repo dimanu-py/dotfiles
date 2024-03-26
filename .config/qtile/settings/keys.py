@@ -35,7 +35,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "Tab", lazy.prev_layout()),
 
     # Kill window
-    ([mod], "w", lazy.window.kill()),
+    ([mod], "q", lazy.window.kill()),
 
     # Switch focus of monitors
     ([mod], "period", lazy.next_screen()),
@@ -44,6 +44,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Restart Qtile
     ([mod, "control"], "r", lazy.restart()),
 
+    # Close session
     ([mod, "control"], "q", lazy.shutdown()),
 
     ([mod], "x", lazy.spawn("archlinux-logout")),
@@ -51,19 +52,25 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "space", lazy.spawn("rofi -show drun")),
 
     # Window Nav
-    ([mod, "shift"], "m", lazy.spawn("rofi -show")),
+    ([mod], "m", lazy.spawn("rofi -show")),
 
     # Browser
-    ([mod], "b", lazy.spawn("brave")),
+    ([mod], "b", lazy.spawn("google-chrome-stable")),
+
+    # Intellij
+    ([mod], "i", lazy.spawn("idea")),
+
+    # Pycharm
+    ([mod], "p", lazy.spawn("pycharm")),
 
     # File Explorer
-    ([mod], "e", lazy.spawn("pcmanfm")),
+    ([mod], "e", lazy.spawn("thunar")),
 
     # Terminal
-    ([mod], "Return", lazy.spawn("alacritty")),
+    ([mod], "Return", lazy.spawn("warp-terminal")),
 
     # Redshift
     ([mod], "r", lazy.spawn("redshift -O 2400")),

@@ -26,7 +26,7 @@ def icon(fg='text', bg='dark', fontsize=16, text="?"):
 def powerline(fg="light", bg="dark", fontsize=37, padding=-3):
     return widget.TextBox(
         **base(fg, bg),
-        text="", # Icon: nf-oct-triangle_left
+        text=" ", # Icon: nf-oct-triangle_left
         fontsize=fontsize,
         padding=padding
     )
@@ -115,35 +115,23 @@ def primary_widgets():
 
         powerline('color4', 'dark'),
 
-        icon(bg="color4", text=' '), # Icon: nf-fa-download
+        widget.CurrentLayoutIcon(**base(bg='color4'), scale=0.65),
 
-        widget.CheckUpdates(
-            background=colors['color4'],
-            colour_have_updates=colors['text'],
-            colour_no_updates=colors['text'],
-            no_update_string='0',
-            display_format='{updates}',
-            update_interval=1800,
-            custom_command='checkupdates',
-        ),
+        widget.CurrentLayout(**base(bg='color4')),
 
         powerline('color3', 'color4'),
 
-        icon(bg="color3", text=' '),  # Icon: nf-fa-feed
-
-        widget.Net(**base(bg='color3'), interface='wlo1'),
+        widget.Battery(**base(bg='color3'), full_char=' ', empty_char=' ', charge_char=' ', discharge_char=' ', format='{char} {percent:2.0%}'),
 
         powerline('color2', 'color3'),
 
-        widget.CurrentLayoutIcon(**base(bg='color2'), scale=0.65),
+        icon(bg="color2", text=' 󰃰 '),  # Icon: nf-mdi-calendar_clock
 
-        widget.CurrentLayout(**base(bg='color2')),
+        widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
 
         powerline('color1', 'color2'),
 
-        icon(bg="color1", text=' '), # Icon: nf-mdi-calendar_clock
-
-        widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
+        widget.CPU(**base(bg='color1'), format='CPU {load_percent}%'),
 
         powerline('dark', 'color1'),
 
@@ -165,7 +153,7 @@ def secondary_widgets():
 
         powerline('color2', 'color1'),
 
-        icon(bg="color2", text=' '), # Icon: nf-mdi-calendar_clock
+        icon(bg="color2", text=' 󰃰 '), # Icon: nf-mdi-calendar_clock
 
         widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
 
@@ -174,7 +162,7 @@ def secondary_widgets():
 
 widget_defaults = {
     'font': 'UbuntuMono Nerd Font Bold',
-    'fontsize': 14,
+    'fontsize': 15,
     'padding': 1,
 }
 extension_defaults = widget_defaults.copy()

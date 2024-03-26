@@ -2,7 +2,6 @@
 /*
 !.gitignore
 !.gitmodules
-.local/share/JetBrains/
 
 # Except for the files and folders we want to track
 !README.md
@@ -15,4 +14,3 @@
 !.xprofile
 !.Xresources
 !.config
-!.local
