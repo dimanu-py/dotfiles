@@ -35,7 +35,7 @@ disabled = false
 
 [os.symbols]
 Windows = ' '
-Arch = '󰣇'
+Arch = ''
 Ubuntu = ''
 Macos = '󰀵'
 
@@ -49,9 +49,8 @@ read_only = '  '
 #truncate_to_repo = false
 
 [directory.substitutions]
-"~/Documents" = " "
-"~/Developer/diego" = "dimanu"
-"/Users/dimanu/Developer/MARAI" = "marai"
+"/home/dimanu/Documents/" = " "
+"/home/dimanu/Developer/" = "dimanu"
 
 [username]
 format = '$user'
