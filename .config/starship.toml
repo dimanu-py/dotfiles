@@ -30,7 +30,7 @@ disabled = false
 
 [os]
 style = "white"
-format = "[$symbol]($style)"
+format = "[ ]($style)"
 disabled = false
 
 [os.symbols]
@@ -41,7 +41,7 @@ Macos = '󰀵'
 
 [directory]
 style = "bright-blue"
-format = "[$path ]($style)[$read_only]($read_only_style)"
+format = "[at $path ]($style)[$read_only]($read_only_style)"
 truncation_length = 3
 home_symbol = " "
 read_only_style = '197'
