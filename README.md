@@ -25,7 +25,7 @@ resources can be found in the links bellow.
 
 Install _stow_ package
 ```bash
-brew install stow
+sudo apt install stow
 ```
 
 <a name=how-to-use></a>
