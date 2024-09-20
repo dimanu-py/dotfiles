@@ -25,8 +25,7 @@ resources can be found in the links bellow.
 
 Install _stow_ package
 ```bash
-pacman -Ss stow
-sudo pacman -S stow
+brew install stow
 ```
 
 <a name=how-to-use></a>
