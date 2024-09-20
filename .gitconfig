@@ -1,0 +1,47 @@
+[user]
+  name = dimanu
+  email = diego.martinez@frenetic.ai
+
+[core]
+  pager = delta
+
+[alias]
+  local-name = config user.name
+  local-email = config user.email
+  author = commit --amend --author="dimanu-py <diegomtz126@gmail.com>"
+  clear = reset --hard HEAD
+  force = push --force-with-lease
+  continue = rebase --continue
+  stop = rebase --abort
+  showalias = config --get-regexp alias
+  lg = log --pretty='%C(red)%h%Creset%C(yellow)%d%Creset% s% C(cyan)(%ar)% Creset%C(magenta)% aN%Creset'
+  new = lg master..HEAD
+  missing = lg HEAD..master
+  tree = lg --graph --decorate --oneline
+  fixup = commit --fixup
+  patch = add --patch
+
+[commit]
+  template = /Users/dimanu/.stCommitMsg
+
+[pull]
+  rebase = true
+
+[rebase]
+  autoStash = true
+  autosquash = true
+
+[rerere]
+  enabled = true
+
+[user]
+        name = dimanu
+        email = diego.martinez@frenetic.ai
+        trustExitCode = true
+        template = /Users/dimanu/.stCommitMsg
+
+[interactive]
+        diffFilter = diff-so-fancy --patch
+
+[color]
+        ui = true
