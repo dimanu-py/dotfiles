@@ -1,6 +1,6 @@
 [user]
-  name = dimanu
-  email = diego.martinez@frenetic.ai
+  name = dimanu-py
+  email = diegomtz126@gmail.com
 
 [core]
   pager = delta
@@ -15,8 +15,8 @@
   stop = rebase --abort
   showalias = config --get-regexp alias
   lg = log --pretty='%C(red)%h%Creset%C(yellow)%d%Creset% s% C(cyan)(%ar)% Creset%C(magenta)% aN%Creset'
-  new = lg master..HEAD
-  missing = lg HEAD..master
+  new = lg main..HEAD
+  missing = lg HEAD..main
   tree = lg --graph --decorate --oneline
   fixup = commit --fixup
   patch = add --patch
@@ -34,14 +34,8 @@
 [rerere]
   enabled = true
 
-[user]
-        name = dimanu
-        email = diego.martinez@frenetic.ai
-        trustExitCode = true
-        template = /Users/dimanu/.stCommitMsg
-
 [interactive]
-        diffFilter = diff-so-fancy --patch
+  diffFilter = diff-so-fancy --patch
 
 [color]
-        ui = true
+  ui = true
