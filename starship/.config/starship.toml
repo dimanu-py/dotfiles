@@ -96,7 +96,7 @@ sigint_symbol = "ﭦ"
 map_symbol = true
 
 [cmd_duration]
-format = "[  $duration ]($style)"
+format = "[  $duration ]($style)"
 style = "bright-green"
 
 [jobs]

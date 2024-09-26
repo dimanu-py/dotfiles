@@ -19,3 +19,4 @@ alias gs="git status"
 starship init fish | source
 fzf --fish | source
 zoxide init fish | source
+pyenv init - | source
