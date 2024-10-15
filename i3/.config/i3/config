@@ -7,3 +7,4 @@ include $config_path/workspaces.conf
 include $config_path/bar.conf
 include $config_path/binding_modes.conf
 include $config_path/autostarts.conf
+include $config_path/floating_windows.conf
