@@ -1,0 +1,212 @@
+format = """
+$os \
+$directory \
+$all\
+$character
+"""
+
+#right_format = """
+#$docker_context\
+#$conda\
+#$python\
+#$java\
+#$kotlin\
+#$php\
+#$golang\
+#$rust\
+#$nodejs\
+#$line_break\
+#$character
+#"""
+
+# Apply or not a new line at the start of the prompt
+add_newline = false
+
+palette = "dimanu"
+
+## Make prompt a single line or two lines
+[line_break]
+disabled = false
+
+[os]
+style = "white"
+format = "[$symbol]($style)"
+disabled = false
+
+[os.symbols]
+Windows = ' '
+Arch = '󰣇'
+Ubuntu = ''
+Macos = '󰀵'
+
+[directory]
+style = "bright-blue"
+format = "[$path ]($style)[$read_only]($read_only_style)"
+truncation_length = 2
+home_symbol = "  "
+read_only_style = '197'
+read_only = '  '
+truncate_to_repo = false
+
+[directory.substitutions]
+"~/Documents" = " "
+"~/Developer/diego" = "dimanu"
+
+[username]
+format = '$user'
+disabled = true
+show_always = false
+
+[git_branch]
+symbol = ""
+style = "bright-magenta"
+format = 'in [ $symbol $branch ]($style)'
+
+[git_status]
+style = "bright-magenta"
+format = '[($all_status$ahead_behind )]($style)'
+conflicted = '[ ${count}](bright-red) '
+up_to_date = '[󰘽 ](bright-green) '
+untracked = '[󰋗 ${count}](bright-red) '
+ahead = ' ${count}(maroon) '
+diverged = ' ${ahead_count}  ${behind_count}'
+behind = ' ${count}(maroon) '
+stashed = '[ ${count}](sky) '
+modified = '[󰛿 ${count}](bright-yellow) '
+staged = '[󰐗 ${count}](bright-green) '
+renamed = '[󱍸 ${count}](peach) '
+deleted = '[󰍶 ${count}](bright-red) '
+
+#[git_metrics]
+#format = "([+$added]($added_style))[]($added_style)"
+#added_style = "fg:#1C3A5E bg:#FCF392"
+#deleted_style = "fg:bright-red bg:235"
+#disabled = false
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "lavender"
+
+[status]
+disabled = false
+format = "[$symbol $status]($style) "
+not_found_symbol = ""
+not_executable_symbol = ""
+sigint_symbol = "ﭦ"
+map_symbol = true
+
+[cmd_duration]
+format = "[  $duration ]($style)"
+style = "bright-green"
+
+[jobs]
+symbol = " "
+style = "peach"
+number_threshold = 1
+format = "[$symbol]($style)"
+
+[character]
+success_symbol = "[❯ ](bright-magenta)"
+error_symbol = '[✗ ](bright-red)'
+
+[fill]
+symbol = "-"
+
+[conda]
+format = "[$symbol$environment]($style) "
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\[${virtualenv}\])]($style)'
+symbol = " "
+detect_folders = [".venv"]
+detect_extensions = ["py"]
+version_format = "${raw}"
+
+[java]
+format = "[${symbol}(${version} )]($style)"
+symbol = " "
+
+[kotlin]
+format = "[${symbol}(${version} )]($style)"
+symbol = " "
+
+[docker_context]
+symbol = " "
+style = "fg:#7aa2f7"  # Tokyo Night blue
+format = " [$symbol$context]($style) "
+only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+detect_folders = []
+disabled = false
+
+[nodejs]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[aws]
+disabled = true
+
+[time]
+disabled = true
+time_format = "%R" # Hour:Minute Format
+style = "bg:#1d2230"
+format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+
+[palettes.dimanu]
+black = "#1a1b26"
+red = "#f38ba8"
+green = "#9ece6a"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+white = "#a9b1d6"
+bright-black = "#414868"
+bright-red = "#f7768e"
+bright-green = "#9ece6a"
+bright-yellow = "#e0af68"
+bright-blue = "#7aa2f7"
+bright-magenta = "#bb9af7"
+bright-cyan = "#7dcfff"
+bright-white = "#c0caf5"
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+maroon = "#eba0ac"
+peach = "#fab387"
+pale_yellow = "#f9e2af"
+pale_green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+pale_blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
