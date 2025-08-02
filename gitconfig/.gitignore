@@ -9,6 +9,7 @@ Thumbs.db
 
 # JetBrains
 .idea/
+.iml
 
 # Visual Studio Code
 .vscode/

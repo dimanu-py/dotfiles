@@ -5,30 +5,31 @@ Here you can find all my window manager configs as well as different programms I
 Most of the programs are compatible with other Linux distributions.
 
 ----
-1. [How to manage configuration files](#dotfiles)
-   1. [Install GNU Stow](#installation)
-   2. [Use these configs](#how-to-use)
-2. [Basic system utilities](#programs)
-   1. [Wallpaper](#wallpaper)
-   2. [Fonts](#fonts)
-   3. [Audio](#audio)
-   4. [Monitors](#monitors)
-   5. [Storage](#storage)
-   6. [Network](#network)
-   7. [Systray](#systray)
-   8. [Menu](#menu)
-   11. [Notifications](#notifications)
-3. [More advanced system utilities](#advanced)
-   1. [Terminal](#terminal)
-   2. [Git](#git)
-   3. [i3 Window Manager](#i3)
-   4. [AUR Helper](#yay)
-   5. [Media Transfer Protocol](#mtp)
-   6. [File Manager](#file-manager)
-   7. [Trash](#trash)
-   7. [Multimedia](#multimedia)
-   8. [Bluetooth](#bluetooth)
-4. [Xprofile](#xprofile)
+- [:gear: Dotfiles :gear:](#gear-dotfiles-gear)
+  - [How to manage these configuration files](#how-to-manage-these-configuration-files)
+    - [Installing GNU Stow](#installing-gnu-stow)
+    - [Use these configs](#use-these-configs)
+  - [Basic system utilities](#basic-system-utilities)
+    - [Wallpaper](#wallpaper)
+    - [Fonts](#fonts)
+    - [Audio](#audio)
+    - [Monitors](#monitors)
+    - [Storage](#storage)
+    - [Network](#network)
+    - [Systray](#systray)
+    - [Menu](#menu)
+    - [Notifications](#notifications)
+  - [More advanced system utilities](#more-advanced-system-utilities)
+    - [Terminal](#terminal)
+    - [Git](#git)
+    - [i3 Window Manager](#i3-window-manager)
+    - [AUR Helper](#aur-helper)
+    - [Media Transfer Protocol](#media-transfer-protocol)
+    - [File Manager](#file-manager)
+    - [Trash](#trash)
+    - [Multimedia](#multimedia)
+    - [Bluetooth](#bluetooth)
+  - [Xprofile](#xprofile)
 ---
 
 <a name=dotfiles></a>
@@ -109,7 +110,7 @@ To set the wallpaper execute
 feh --bg-scale path/to/wallpaper
 ```
 
-Personally, I normally download this [GitHub repository](https://github.com/antoniosarosi/Wallpapers) for my wallpapers.
+Personally, I normally download this [GitHub repository](https://github.com/dimanu-py/wallpapers) for my wallpapers.
 
 <a name=fonts></a>
 ### Fonts
@@ -139,7 +140,7 @@ To manage volumen control easily latter on with shortcuts I recommend installing
 <a name=monitors></a>
 ### Monitors
 
-In my case, the monitor setup is a bit special because I use a docking station with Display Manager drivers. Under the [monitor](./monitors/.config/monitors/) package you can have more detailed information on how to setup everything and why the need of it. In summary:
+In my case, the monitor setup is a bit special because I use a docking station with Display Manager drivers. Under the [monitor](./monitors/.config/monitors/) package you can have more detailed information on how to setup everything and why the need of it.
 
 You don't need to follow these instructions if it's not your case. What I mainly use to set the monitors is [xrandr](https://wiki.archlinux.org/title/Xrandr)
 

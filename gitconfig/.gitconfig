@@ -6,6 +6,7 @@
   pager = delta
   editor = nano
   excludesfile = /home/dimanu/.gitignore
+	autocrlf = input
 
 [alias]
   local-name = config user.name
