@@ -1,3 +1,4 @@
 - name: Install git pagckages
   pacman:
-   - lazygit 
+    name:
+      - lazygit 

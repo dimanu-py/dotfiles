@@ -1,5 +1,6 @@
 - name: Install libraries for terminal
   pacman:
+    name:
       - wget 
       - curl 
       - unzip 
@@ -26,13 +27,14 @@
 
 - name: Install fonts
   pacman:
-    - ttf-font-awesome 
-    - ttf-cascadia-mono-nerd 
-    - noto-fonts 
-    - noto-fonts-emoji 
-    - ttf-jetbrains-mono 
-    - noto-fonts-cjk 
-    - noto-fonts-extra
+    name:
+      - ttf-font-awesome 
+      - ttf-cascadia-mono-nerd 
+      - noto-fonts 
+      - noto-fonts-emoji 
+      - ttf-jetbrains-mono 
+      - noto-fonts-cjk 
+      - noto-fonts-extra
 
 - name: Set fish as default shell
   ansible.builtin.user:

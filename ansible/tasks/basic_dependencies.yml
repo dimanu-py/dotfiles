@@ -4,11 +4,12 @@
 
 - name: Install dependencies
   pacman:
-    - git
-    - base-devel
-    - gum
-    - python-terminaltexteffects
-    - imagemagick
+    name:
+      - git
+      - base-devel
+      - gum
+      - python-terminaltexteffects
+      - imagemagick
 
 - name: Clone yay repository
   become: yes
