@@ -1,0 +1,4 @@
+user: "{{ lookup('env', 'USER') }}"
+home: "{{ lookup('env', 'HOME') }}"
+python_version: "3.13"
+python_env_name: "base_python"

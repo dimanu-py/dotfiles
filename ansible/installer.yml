@@ -1,0 +1,14 @@
+- name: Install dependencies
+  hosts: hosts
+  become: true
+  vars_file:
+    - variables.yml
+  tasks:
+    - import_task: tasks/basic_dependencies.yml
+      tag: basic-deps
+    - import_task: tasks/git_tools.yml
+      tag: git
+    - import_task: tasks/shell.yml
+      tag: shell
+    - import_task: tasks/terminal.yml
+      tag: terminal

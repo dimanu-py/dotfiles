@@ -1,0 +1,29 @@
+- name: Install libraries for terminal
+  pacman:
+      - wget 
+      - curl 
+      - unzip 
+      - inetutils 
+      - impala
+      - fd 
+      - eza 
+      - fzf 
+      - ripgrep 
+      - zoxide 
+      - bat 
+      - jq
+      - wl-clipboard 
+      - fastfetch 
+      - btop
+      - man 
+      - tldr 
+      - less 
+      - whois 
+      - plocate
+      - kitty
+      - fish
+
+- name: Set fish as default shell
+  ansible.builtin.user:
+    name: "{{ user }}"
+    shell: /usr/bin/fish
