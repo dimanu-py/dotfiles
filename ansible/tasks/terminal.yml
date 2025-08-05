@@ -22,8 +22,23 @@
       - plocate
       - kitty
       - fish
+      - starship
+
+- name: Install fonts
+  pacman:
+    - ttf-font-awesome 
+    - ttf-cascadia-mono-nerd 
+    - noto-fonts 
+    - noto-fonts-emoji 
+    - ttf-jetbrains-mono 
+    - noto-fonts-cjk 
+    - noto-fonts-extra
 
 - name: Set fish as default shell
   ansible.builtin.user:
     name: "{{ user }}"
     shell: /usr/bin/fish
+
+- name: Apply custom dotfiles for terminal
+  become: false
+  command: stow --adopt bat fish kitty starship
