@@ -62,7 +62,7 @@ show_always = true
 [git_branch]
 symbol = ""
 style = "fg:green"
-format = 'in [ $symbol $branch ]($style)'
+format = ' in [ $symbol $branch ]($style)'
 
 [git_status]
 style = "fg:green"
