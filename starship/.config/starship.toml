@@ -22,14 +22,14 @@ $character
 # Apply or not a new line at the start of the prompt
 add_newline = false
 
-palette = "dimanu"
+palette = "everforest"
 
 ## Make prompt a single line or two lines
 [line_break]
 disabled = false
 
 [os]
-style = "white"
+style = "fg:grey2"
 format = "[$symbol]($style)"
 disabled = false
 
@@ -40,42 +40,44 @@ Ubuntu = ''
 Macos = '󰀵'
 
 [directory]
-style = "bright-blue"
+style = "fg:orange"
+read_only_style = "fg:orange"
 format = "[$path ]($style)[$read_only]($read_only_style)"
 truncation_length = 2
 home_symbol = "  "
-read_only_style = '197'
 read_only = '  '
 truncate_to_repo = false
 
 [directory.substitutions]
 "~/Documents" = " "
-"~/Developer/diego" = "dimanu"
+"~/Developer" = "dimanu"
 
 [username]
-format = '$user'
-disabled = true
-show_always = false
+style_user = "fg:blue"
+stule_root = "fg:red"
+format = '[$user]($style)'
+disabled = false
+show_always = true
 
 [git_branch]
 symbol = ""
-style = "bright-magenta"
+style = "fg:green"
 format = 'in [ $symbol $branch ]($style)'
 
 [git_status]
-style = "bright-magenta"
+style = "fg:green"
 format = '[($all_status$ahead_behind )]($style)'
-conflicted = '[ ${count}](bright-red) '
-up_to_date = '[󰘽 ](bright-green) '
-untracked = '[󰋗 ${count}](bright-red) '
-ahead = ' ${count}(maroon) '
+conflicted = '[ ${count}](fg:red) '
+up_to_date = '[󰘽 ](fg:green) '
+untracked = '[󰋗 ${count}](fg:untracked) '
+ahead = ' ${count}(fg:purple) '
 diverged = ' ${ahead_count}  ${behind_count}'
-behind = ' ${count}(maroon) '
-stashed = '[ ${count}](sky) '
-modified = '[󰛿 ${count}](bright-yellow) '
-staged = '[󰐗 ${count}](bright-green) '
-renamed = '[󱍸 ${count}](peach) '
-deleted = '[󰍶 ${count}](bright-red) '
+behind = ' ${count}(fg:purple) '
+stashed = '[ ${count}](fg:blue) '
+modified = '[󰛿 ${count}](fg:yellow) '
+staged = '[󰐗 ${count}](fg:green) '
+renamed = '[󱍸 ${count}](fg:orange) '
+deleted = '[󰍶 ${count}](fg:red) '
 
 #[git_metrics]
 #format = "([+$added]($added_style))[]($added_style)"
@@ -97,17 +99,17 @@ map_symbol = true
 
 [cmd_duration]
 format = "[  $duration ]($style)"
-style = "bright-green"
+style = "fg:green"
 
 [jobs]
 symbol = " "
-style = "peach"
+style = "fg:orange"
 number_threshold = 1
 format = "[$symbol]($style)"
 
 [character]
-success_symbol = "[❯ ](bright-magenta)"
-error_symbol = '[✗ ](bright-red)'
+success_symbol = "[❯ ](bold green)"
+error_symbol = '[✗ ](bold red)'
 
 [fill]
 symbol = "-"
@@ -168,7 +170,40 @@ time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 
-[palettes.dimanu]
+
+[palettes.everforest]
+bg_dim = "#232a2e"
+bg_0 = "#2d353b"
+bg_1 = "#343f44"
+bg_2 = "#3d484d"
+bg_3 = "#475258"
+bg_4 = "#4f585e"
+bg_5 = "#56635f"
+bg_visual = "#543a48"
+bg_red = "#514045"
+bg_green = "#425047"
+bg_blue = "3a515d"
+bg_yellow = "#4d4c42"
+
+fg = "#d3c6aa"
+
+red = "e67e80"
+orange = "#dbbc7f"
+yellow = "#dbbc7f"
+green = "a7c080"
+aqua = "#83c092"
+blue = "#7fbbb3"
+purple = "#d699b6"
+grey0 = "#7a8478"
+grey1 = "#859289"
+grey2 = "#9da9a0"
+lavender = "#b4befe"
+
+statusline1 = "#a7c080"
+statusline2 = "#d3c6aa"
+statusline3 = "#e67e80"
+
+[palettes.mocha]
 black = "#1a1b26"
 red = "#f38ba8"
 green = "#9ece6a"
