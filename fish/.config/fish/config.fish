@@ -1,11 +1,11 @@
 # Path variation
 set -U fish_user_paths $fish_user_paths $HOME/.local/bin
 # Custom greeting
-source /home/dimanu/.config/fish/functions/fish_greet.fish
+source $HOME/.config/fish/functions/fish_greet.fish
 set -g fish_greeting
 
 # Alias
-alias dev="cd /home/dimanu/Developer"
+alias dev="cd $HOME/Developer"
 alias lah="ls -lah"
 alias dwb="docker-compose exec -it --user=laradock workspace bash"
 alias grep="grep --color=auto"
