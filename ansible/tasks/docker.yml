@@ -1,7 +1,0 @@
-- name: Install docker packages
-  pacman:
-    name:
-      - lazydocker-bin
-      - docker 
-      - docker-compose 
-      - docker-buildx
