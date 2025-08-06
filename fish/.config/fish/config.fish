@@ -23,4 +23,4 @@ alias gsw='git switch (git branch -a | fzf | sed "s/origin\///")'
 starship init fish | source
 fzf --fish | source
 zoxide init fish | source
-pyenv init - | source
+# pyenv init - | source
