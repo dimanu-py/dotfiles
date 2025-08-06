@@ -54,7 +54,7 @@ truncate_to_repo = false
 
 [username]
 style_user = "fg:blue"
-stule_root = "fg:red"
+style_root = "fg:red"
 format = '[$user]($style)'
 disabled = false
 show_always = true
