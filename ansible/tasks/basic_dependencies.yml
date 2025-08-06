@@ -10,6 +10,7 @@
       - gum
       - python-terminaltexteffects
       - imagemagick
+      - nano
 
 - name: Clone yay repository
   become: yes
