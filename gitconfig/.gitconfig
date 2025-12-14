@@ -1,6 +1,6 @@
 [user]
   name = dimanu-py
-  email = diegomtz126@gmail.com
+  email = dimanu.py@gmail.com
 
 [core]
   pager = delta
@@ -9,6 +9,10 @@
 	autocrlf = input
 
 [alias]
+  sw = switch
+  br = branch
+  cm = commit -m
+  st = status
   local-name = config user.name
   local-email = config user.email
   author = commit --amend --author="dimanu-py <diegomtz126@gmail.com>"
@@ -23,12 +27,16 @@
   tree = lg --graph --decorate --oneline
   fixup = commit --fixup
   patch = add --patch
-
-[commit]
-  template = /Users/dimanu/.stCommitMsg
+  purge = fetch -p
+	delete = branch -d
+	create = switch -c
+	push-new = "!f() { branch=\"${1:-$(git branch --show-current)}\"; git push -u origin \"$branch\"; }; f"
 
 [pull]
   rebase = true
+
+[push]
+  autoSetupRemote = true
 
 [rebase]
   autoStash = true
@@ -36,6 +44,21 @@
 
 [rerere]
   enabled = true
+  autoupdate = true
+
+[diff]
+  algorithm = histogram
+  colorMoves = plain
+  mnemonicPrefix = true
+
+[commit]
+  verbose = true
+
+[branch]
+  sort = -commiterdate
+
+[tag]
+  sort = -version:refname
 
 [interactive]
   diffFilter = diff-so-fancy --patch
