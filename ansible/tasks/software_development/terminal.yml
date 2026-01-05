@@ -1,39 +1,40 @@
 - name: Install libraries for terminal
   pacman:
     name:
-      - wget 
-      - curl 
-      - unzip 
-      - inetutils 
+      - wget
+      - curl
+      - unzip
+      - inetutils
       - impala
-      - fd 
-      - eza 
-      - fzf 
-      - ripgrep 
-      - zoxide 
-      - bat 
+      - fd
+      - eza
+      - fzf
+      - ripgrep
+      - zoxide
+      - bat
       - jq
-      - wl-clipboard 
-      - fastfetch 
+      - wl-clipboard
+      - fastfetch
       - btop
-      - man 
-      - tldr 
-      - less 
-      - whois 
+      - man
+      - tldr
+      - less
+      - whois
       - plocate
       - kitty
+      - ghostty
       - fish
       - starship
 
 - name: Install fonts
   pacman:
     name:
-      - ttf-font-awesome 
-      - ttf-cascadia-mono-nerd 
-      - noto-fonts 
-      - noto-fonts-emoji 
-      - ttf-jetbrains-mono 
-      - noto-fonts-cjk 
+      - ttf-font-awesome
+      - ttf-cascadia-mono-nerd
+      - noto-fonts
+      - noto-fonts-emoji
+      - ttf-jetbrains-mono
+      - noto-fonts-cjk
       - noto-fonts-extra
 
 - name: Set fish as default shell
@@ -43,4 +44,4 @@
 
 - name: Apply custom dotfiles for terminal
   become: false
-  command: stow --adopt bat fish kitty starship
+  command: stow --adopt bat fish kitty starship ghostty

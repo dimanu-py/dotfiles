@@ -1,0 +1,55 @@
+- name: Install docker
+  pacman:
+    name:
+      - docker
+      - docker-compose
+      - docker-buildx
+
+- name: Ensure docker dir exists
+  file:
+    path: /etc/docker
+    state: directory
+    mode: "0755"
+
+- name: Limit docker logs size
+  copy:
+    dest: /etc/docker/daemon.json
+    content: |
+      {
+        "log_driver": "json-files",
+        "log-opts": {
+          " max-size": "10m",
+          "max-file": "5"
+        }
+      }
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Start docker daemon
+  become: yes
+  systemd:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+  loop:
+    - docker
+    - containerd
+
+- name: Ensure docker group exists
+  become: yes
+  group:
+    name: docker
+    state: present
+
+- name: Add user to docker group
+  become: yes
+  user:
+    name: "{{ user }}"
+    groups: docker
+    append: yes
+
+- name: Install lazy docker
+  community.general.yay:
+    name:
+      - lazydocker-bin

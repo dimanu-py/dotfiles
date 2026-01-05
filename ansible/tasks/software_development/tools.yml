@@ -1,0 +1,9 @@
+- name: Install software tools
+  community.general.yay:
+    name:
+      - bruno-bin
+
+- name: Install DBeaver
+  pacman:
+    name:
+      - dbeaver

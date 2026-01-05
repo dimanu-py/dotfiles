@@ -1,0 +1,9 @@
+- name: Install software tools
+  community.general.yay:
+    name:
+      - visual-studio-code-bin
+      - jetbrains-toolbox
+
+- name: Copy VS Code from dotfiles
+  become: false
+  command: stow --adopt vs-code
