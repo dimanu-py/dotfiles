@@ -1,3 +1,15 @@
+- name: Update pacman
+  pacman:
+    update_cache: yes
+
+- name: Install dependencies
+  pacman:
+    name:
+      - gum
+      - python-terminaltexteffects
+      - imagemagick
+      - nano
+
 - name: Install USB packages
   pacman:
     name:

@@ -2,15 +2,11 @@
   pacman:
     update_cache: yes
 
-- name: Install dependencies
+- name: Install dependencies for yay
   pacman:
     name:
       - git
       - base-devel
-      - gum
-      - python-terminaltexteffects
-      - imagemagick
-      - nano
 
 - name: Clone yay repository
   become: yes
@@ -27,19 +23,10 @@
     owner: "{{ user }}"
     group: "{{ user }}"
     recurse: yes
-  
+
 - name: Install yay
   become: yes
   become_user: "{{ user }}"
   command: makepkg -si --noconfirm
   args:
     chdir: /opt/yay-git
-
-- name: Clone dotfiles
-  become: false
-  git:
-    repo: https://github.com/dimanu-py/dotfiles.git
-    version: main
-    dest: "{{ home }}/.dotfiles"
-    clone: yes
-    update: yes
