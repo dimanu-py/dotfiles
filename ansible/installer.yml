@@ -1,14 +1,53 @@
-- name: Install dependencies
+- name: Install and configure system
   hosts: hosts
   become: true
-  vars_file:
+  vars_files:
     - variables.yml
+
   tasks:
-    - import_task: tasks/basic_dependencies.yml
-      tag: basic-deps
-    - import_task: tasks/git_tools.yml
-      tag: git
-    - import_task: tasks/shell.yml
-      tag: shell
-    - import_task: tasks/terminal.yml
-      tag: terminal
+    # ==================== PRE-REQUISITES ====================
+    - name: Setup yay AUR helper
+      import_tasks: tasks/pre_requisites/yay.yml
+      tags: [pre-requisites, yay]
+
+    - name: Setup dotfiles
+      import_tasks: tasks/pre_requisites/dotfiles.yml
+      tags: [pre-requisites, dotfiles]
+
+    # ==================== SOFTWARE DEVELOPMENT ====================
+    - name: Setup Git
+      import_tasks: tasks/software_development/git.yml
+      tags: [software-development, git]
+
+    - name: Setup Docker
+      import_tasks: tasks/software_development/docker.yml
+      tags: [software-development, docker]
+
+    - name: Setup Python
+      import_tasks: tasks/software_development/python.yml
+      tags: [software-development, python]
+
+    - name: Setup Terminal
+      import_tasks: tasks/software_development/terminal.yml
+      tags: [software-development, terminal]
+
+    - name: Setup IDEs
+      import_tasks: tasks/software_development/ides.yml
+      tags: [software-development, ides]
+
+    - name: Setup Development Tools
+      import_tasks: tasks/software_development/tools.yml
+      tags: [software-development, tools]
+
+    # ==================== DESKTOP ENVIRONMENT ====================
+    - name: Setup Hyprland
+      import_tasks: tasks/desktop_environment/hyprlandia.yml
+      tags: [desktop-environment, hyprland]
+
+    - name: Setup Desktop Utilities
+      import_tasks: tasks/desktop_environment/utilities.yml
+      tags: [desktop-environment, utilities]
+
+    - name: Setup Extras
+      import_tasks: tasks/desktop_environment/extras.yml
+      tags: [desktop-environment, extras]
