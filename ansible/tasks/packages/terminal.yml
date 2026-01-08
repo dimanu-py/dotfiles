@@ -1,0 +1,37 @@
+- name: Install terminal emulators
+  pacman:
+    name:
+      - kitty
+      - ghostty
+
+- name: Install bash
+  pacman:
+    name:
+      - fish
+      - zsh
+
+- name: Install terminal tools
+  pacman:
+    name:
+      - wget  # File downloader
+      - fd  # Find command
+      - eza  # Ls replacement
+      - fzf  # Fuzzy finder
+      - ripgrep  # Fast grep alternative
+      - zoxide  # Smarter cd command
+      - bat  # Pretty cat
+      - starship  # Prompt customizer
+      - dust  # Disk usage
+      - jq  # Json parser
+      - less  # Text pager
+      - unzip  # Archive extraction
+      - tldr  # Simplified man
+      - man
+      - gum  # Shell script styling tool
+      - libyaml  # Yaml parser
+      - tobi-try  # Package trier without installing them
+      - gtk4-layer-shell
+      - curl
+      - inetutils
+      - plocate
+

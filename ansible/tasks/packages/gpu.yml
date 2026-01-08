@@ -1,0 +1,14 @@
+- name: Hardware drivers
+  commmunity.general.yay:
+    name:
+      - dkms  # Dynamic kernel module support
+      - broadcom-wl
+
+- name: NVIDIA GPU support
+  community.general.yay:
+    name:
+      - nvidia-dkms  # Nvidia proprietary drivers
+      - nvidia-open-dkms  # Nvidia open-source kernel modules
+      - nvidia-utils  # Nvidia userspace utilities
+      - lib32-nvidia-utils  # 32-bit NVIDIA libraries
+      - libva-nvidia-driver  # VA-API support

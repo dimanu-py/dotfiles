@@ -1,13 +1,3 @@
-- name: Update pacman
-  pacman:
-    update_cache: yes
-
-- name: Install dependencies for yay
-  pacman:
-    name:
-      - git
-      - base-devel
-
 - name: Clone yay repository
   become: yes
   git:

@@ -1,0 +1,11 @@
+- name: Resource monitoring
+  pacman:
+    name:
+      - btop
+      - usage
+
+- name: System information
+  pacman:
+    name:
+      - fastfetch
+      - inxi

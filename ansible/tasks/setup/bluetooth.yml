@@ -1,0 +1,6 @@
+- name: Enable blueberry service
+  become: yes
+  systemd:
+    name: bluetooth
+    state: started
+    enabled: yes

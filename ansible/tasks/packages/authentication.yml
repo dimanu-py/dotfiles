@@ -1,0 +1,12 @@
+- name: Install basic auth tools
+  pacman:
+    name:
+      - gnome-keyring  # Password and secrets management
+      - libsecret  # Library for storing and retrieving passwords
+      - polkit-gnome  # Authentication agent for priviliged operations
+
+- name: Install password manager
+  community.general.yay:
+    name:
+      - 1password-beta  # Password manager application
+      - 1password-cli  # 1Password command-line interface

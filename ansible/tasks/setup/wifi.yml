@@ -1,0 +1,6 @@
+- name: Enable iwd service
+  become: yes
+  systemd:
+    name: iwd
+    state: started
+    enabled: yes

@@ -6,8 +6,3 @@
     dest: "{{ home }}/.dotfiles"
     clone: yes
     update: yes
-
-- name: Install stow for managing dotfiles
-  pacman:
-    name:
-      - stow

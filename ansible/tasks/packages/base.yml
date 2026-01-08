@@ -1,0 +1,16 @@
+- name: Update pacman
+  pacman:
+    update_cache: yes
+
+- name: Install stow for managing dotfiles
+  pacman:
+    name:
+      - stow  # Dotfiles management
+      - git  # Version control
+      - base-devel
+      - openssh  # Ssh client
+
+- name: Install power balance
+  community.general.yay:
+    name:
+      - power-profiles-daemon

@@ -1,0 +1,6 @@
+- name: Enable printer service
+  become: yes
+  systemd:
+    name: cups
+    state: started
+    enabled: yes

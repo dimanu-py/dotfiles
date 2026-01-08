@@ -1,0 +1,14 @@
+- name: Display manager
+  pacman:
+    name:
+      - sddm
+
+- name: Boot splash screen
+  pacman:
+    name:
+      - plymouth
+
+- name: Bright controller
+  community.general.yay:
+    name:
+      - brightnessctl

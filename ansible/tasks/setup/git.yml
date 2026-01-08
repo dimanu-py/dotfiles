@@ -1,17 +1,9 @@
-- name: Install git pagckages
-  pacman:
-    name:
-      - git
-      - lazygit
-      - diff-so-fancy
-      - git-delta
-
 - name: Setup git info
   command: |
     git config --global user.name "dimanu-py"
     git config --global user.email "dimanu.py@gmail.com"
 
-- name: Copy git configuration files
+- name: Git configuration files
   become: false
   file:
     src: "{{ home }}/.doftiles/gitconfig/{{ item }}"

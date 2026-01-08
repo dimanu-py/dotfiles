@@ -1,0 +1,57 @@
+- name: File sender
+  community.general.yay:
+    name:
+      - localsend-bin  # Send files to other devices
+
+- name: Browser
+  community.general.yay:
+    name:
+      - brave-bin
+
+- name: Wifi
+  pacman:
+    name:
+      - iwd
+      - whois  # Domain lookup tool
+      - impala  # TUI for managing Wifi connection
+
+- name: Bluetooth
+  community.general.yay:
+    name:
+      - blueberry
+
+- name: Bluetooth tui
+  pacman:
+    name:
+      - bluetui
+
+- name: App launcher
+  community.general.yay:
+    name:
+     - walker-bin
+     - walker-bin-debug
+
+- name: App launcher backend
+  community.general.yay:
+    name:
+      - elephant
+      - elephant-calc
+      - elephant-clipboard
+      - elephant-bluetooth
+      - elephant-desktopapplications
+      - elephant-files
+      - elephant-menus
+      - elephant-providerlist
+      - elephant-runner
+      - elephant-unicode
+      - elephant-symbols
+      - elephant-websearch
+      - elephant-todo
+      - libqalculate
+
+- name: Input methods
+  community.general.yay:
+    name:
+      - fcitx5
+      - fcitx5-gtk
+      - fcitx5-qt

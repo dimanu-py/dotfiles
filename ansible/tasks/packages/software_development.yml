@@ -1,0 +1,40 @@
+- name: Docker
+  pacman:
+    name:
+      - docker
+      - docker-compose
+      - lazydocker
+
+- name: Install git pagckages
+  pacman:
+    name:
+      - git
+      - lazygit
+      - diff-so-fancy
+      - git-delta
+
+- name: Install IDEs
+  community.general.yay:
+    name:
+      - visual-studio-code-bin
+      - jetbrains-toolbox
+
+- name: Install terminal IDEs
+  pacman:
+    - nvim
+    - nano
+
+- name: Install software tools
+  community.general.yay:
+    name:
+      - bruno-bin
+
+- name: Install DBeaver
+  pacman:
+    name:
+      - dbeaver
+
+- name: Install env manager
+  pacman:
+    - name:
+      - mise
