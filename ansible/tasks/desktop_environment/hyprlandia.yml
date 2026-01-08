@@ -5,7 +5,8 @@
      - hyprshot  # Take screenshots
      - hyprpicker  # Color picker
      - hyprlock  # Lock screen
-     - hypridle
+     - hypridle  # Idle after certain time
+     - hyprsunset  # To set nigthmode
      - polkit-gnome  # Auth agent
      - hyprland-qtutils  # Qt apps integration
      - walker-bin  # App launcher
@@ -17,3 +18,5 @@
      - swayosd  # OSD server to show volume, bright indications
      - xdg-desktop-portal-hyprland
      - xdg-desktop-portal-gtk
+     - uwsm
+     - xdg-terminal-exec

@@ -24,6 +24,7 @@
       - kitty
       - ghostty
       - fish
+      - zsh
       - starship
 
 - name: Install fonts
@@ -40,8 +41,8 @@
 - name: Set fish as default shell
   ansible.builtin.user:
     name: "{{ user }}"
-    shell: /usr/bin/fish
+    shell: /usr/bin/zsh
 
 - name: Apply custom dotfiles for terminal
   become: false
-  command: stow --adopt bat fish kitty starship ghostty
+  command: stow --adopt bat zsh kitty starship ghostty
