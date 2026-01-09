@@ -1,53 +1,52 @@
-- name: Install and configure system
+---
+- name: Install and configure Arch Linux system
   hosts: hosts
   become: true
   vars_files:
     - variables.yml
 
   tasks:
-    # ==================== PRE-REQUISITES ====================
-    - name: Setup yay AUR helper
-      import_tasks: tasks/pre_requisites/yay.yml
-      tags: [pre-requisites, yay]
+    # ==================== SYSTEM INITIALIZATION ====================
+    - name: Install base system packages and setup yay
+      import_tasks: tasks/base.yml
+      tags: [init]
 
-    - name: Setup dotfiles
-      import_tasks: tasks/pre_requisites/dotfiles.yml
-      tags: [pre-requisites, dotfiles]
+    # ==================== HARDWARE & SERVICES ====================
+    - name: Setup Services
+      tags: [services]
+      block:
+        - name: Setup WiFi services
+          import_tasks: tasks/wifi.yml
+        - name: Setup Bluetooth services
+          import_tasks: tasks/bluetooth.yml
+        - name: Install authentication packages
+          import_tasks: tasks/authentication.yml
 
-    # ==================== SOFTWARE DEVELOPMENT ====================
-    - name: Setup Git
-      import_tasks: tasks/software_development/git.yml
-      tags: [software-development, git]
+    - name: Install GPU drivers and packages
+      import_tasks: tasks/gpu.yml
+      tags: [gpu]
 
-    - name: Setup Docker
-      import_tasks: tasks/software_development/docker.yml
-      tags: [software-development, docker]
-
-    - name: Setup Python
-      import_tasks: tasks/software_development/python.yml
-      tags: [software-development, python]
-
-    - name: Setup Terminal
-      import_tasks: tasks/software_development/terminal.yml
-      tags: [software-development, terminal]
-
-    - name: Setup IDEs
-      import_tasks: tasks/software_development/ides.yml
-      tags: [software-development, ides]
-
-    - name: Setup Development Tools
-      import_tasks: tasks/software_development/tools.yml
-      tags: [software-development, tools]
+    # ==================== SOFTWARE TOOLS ====================
+    - name: Setup Software Tools
+      tags: [dev]
+      block:
+        - name: Install terminal packages and shell configuration
+          import_tasks: tasks/terminal.yml
+        - name: Install software development packages
+          import_tasks: tasks/software_development.yml
 
     # ==================== DESKTOP ENVIRONMENT ====================
-    - name: Setup Hyprland
-      import_tasks: tasks/desktop_environment/hyprlandia.yml
-      tags: [desktop-environment, hyprland]
+    - name: Install Hyprland and desktop components
+      import_tasks: tasks/hyprlandia.yml
+      tags: [desktop]
 
-    - name: Setup Desktop Utilities
-      import_tasks: tasks/desktop_environment/utilities.yml
-      tags: [desktop-environment, utilities]
-
-    - name: Setup Extras
-      import_tasks: tasks/desktop_environment/extras.yml
-      tags: [desktop-environment, extras]
+    # ==================== MEDIA & APPLICATIONS ====================
+    - name: Install applications
+      tags: [apps]
+      block:
+        - name: Install media applications
+          import_tasks: tasks/media.yml
+        - name: Install file management applications
+          import_tasks: tasks/file_management.yml
+        - name: Install browser
+          import_tasks: tasks/browser.yml
