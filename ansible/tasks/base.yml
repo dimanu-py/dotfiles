@@ -1,0 +1,52 @@
+- name: Update pacman
+  pacman:
+    update_cache: yes
+
+- name: Install stow for managing dotfiles
+  pacman:
+    name:
+      - stow # Dotfiles management
+      - git # Version control
+      - base-devel # Development tools
+      - wget # File downloader
+      - curl # Data transfer tool
+      - openssh # Ssh client
+      - sddm # Display manager
+      - plymouth # Boot splash screen
+
+- name: Clone yay repository
+  become: true
+  git:
+    repo: https://aur.archlinux.org/yay-git.git
+    dest: /opt/yay-git
+    clone: yes
+    update: no
+
+- name: Change yay directory ownership
+  become: true
+  file:
+    path: /opt/yay-git
+    owner: "{{ user }}"
+    group: "{{ user }}"
+    recurse: yes
+
+- name: Install yay
+  become: true
+  become_user: "{{ user }}"
+  command: makepkg -si --noconfirm
+  args:
+    chdir: /opt/yay-git
+
+- name: Clone dotfiles
+  become: false
+  git:
+    repo: https://github.com/dimanu-py/dotfiles.git
+    version: main
+    dest: "{{ home }}/.dotfiles"
+    clone: yes
+    update: yes
+
+- name: Install power balance
+  community.general.yay:
+    name:
+      - power-profiles-daemon

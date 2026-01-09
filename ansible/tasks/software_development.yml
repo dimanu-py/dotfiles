@@ -1,0 +1,113 @@
+- name: Docker
+  pacman:
+    name:
+      - docker
+      - docker-compose
+      - lazydocker
+
+- name: Install git pagckages
+  pacman:
+    name:
+      - git
+      - lazygit
+      - diff-so-fancy
+      - git-delta
+
+- name: Install IDEs
+  community.general.yay:
+    name:
+      - visual-studio-code-bin
+      - jetbrains-toolbox
+
+- name: Install terminal IDEs
+  pacman:
+    - nvim
+    - nano
+
+- name: Install software tools
+  community.general.yay:
+    name:
+      - bruno-bin
+
+- name: Install DBeaver
+  pacman:
+    name:
+      - dbeaver
+
+- name: Install env manager
+  pacman:
+    - name:
+        - mise
+
+- name: Install uv
+  shell: "curl -LsSf https://astral.sh/uv/install.sh | sh"
+  args:
+    executable: /bin/fish
+
+- name: VS Code dotfiles
+  become: false
+  command: stow --adopt vs-code
+
+- name: NVIM dotfiles
+  become: false
+  command: stow --adopt nvim
+
+- name: Ensure docker dir exists
+  file:
+    path: /etc/docker
+    state: directory
+    mode: "0755"
+
+- name: Limit docker logs size
+  copy:
+    dest: /etc/docker/daemon.json
+    content: |
+      {
+        "log_driver": "json-files",
+        "log-opts": {
+          " max-size": "10m",
+          "max-file": "5"
+        }
+      }
+    owner: root
+    group: root
+    mode: "0644"
+
+- name: Start docker daemon
+  become: true
+  systemd:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+  loop:
+    - docker
+    - containerd
+
+- name: Ensure docker group exists
+  become: true
+  group:
+    name: docker
+    state: present
+
+- name: Add user to docker group
+  become: true
+  user:
+    name: "{{ user }}"
+    groups: docker
+    append: yes
+
+- name: Setup git info
+  command: |
+    git config --global user.name "dimanu-py"
+    git config --global user.email "dimanu.py@gmail.com"
+
+- name: Git configuration files
+  become: false
+  file:
+    src: "{{ home }}/.doftiles/gitconfig/{{ item }}"
+    dest: "{{ home }}/{{ item }}"
+    state: link
+    force: yes
+  loop:
+    - .gitconfig
+    - .gitignore

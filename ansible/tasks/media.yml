@@ -1,0 +1,66 @@
+- name: Audio
+  commmunity.general.yay:
+    name:
+      - pipewire # Audio daemon
+      - pipewire-alsa # ALSA compatibility layer
+      - pipewire-jack # JACK compatibility layer
+      - pipewire-pulse # PulseAudio compatibility layer
+      - libpulse # PulseAudio client
+      - wireplumber # Pipewire session manager
+      - wiremix # Audio mix
+      - pamixer # Volume control
+      - playerctl # Control media
+
+- name: Bright controller
+  community.general.yay:
+    name:
+      - brightnessctl
+
+- name: Input methods
+  community.general.yay:
+    name:
+      - fcitx5
+      - fcitx5-gtk
+      - fcitx5-qt
+
+- name: Media player
+  commmunity.general.yay:
+    name:
+      - mpv
+      - spotify
+
+- name: Image viewer
+  community.general.yay:
+    name:
+      - imv
+
+- name: Streaming and recording
+  community.general.yay:
+    name:
+      - obs-studio
+      - wf-recorder # Screen recorder for NVIDA
+      - wl-screenrec # Screen recorder for not NVIDIA
+      - gpu-screen-recorder
+
+- name: Video editor
+  community.general.yay:
+    name:
+      - kdenlive
+
+- name: Image editor
+  community.general.yay:
+    name:
+      - pinta
+      - imagemagick
+
+- name: Screenshot utility
+  community.general.yay:
+    name:
+      - flameshot
+      - kvantum # For flameshot style window
+      - kvantum-qt5
+
+- name: Calculator
+  commmunity.general.yay:
+    name:
+      - gnome-calculator

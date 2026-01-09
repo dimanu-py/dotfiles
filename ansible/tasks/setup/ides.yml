@@ -1,7 +1,0 @@
-- name: VS Code dotfiles
-  become: false
-  command: stow --adopt vs-code
-
-- name: NVIM dotfiles
-  become: false
-  command: stow --adopt nvim

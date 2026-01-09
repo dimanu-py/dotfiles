@@ -1,0 +1,4 @@
+- name: Browser
+  community.general.yay:
+    name:
+      - brave-bin

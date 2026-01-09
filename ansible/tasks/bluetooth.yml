@@ -1,0 +1,16 @@
+- name: Bluetooth
+  community.general.yay:
+    name:
+      - blueberry
+
+- name: Bluetooth tui
+  pacman:
+    name:
+      - bluetui
+
+- name: Enable blueberry service
+  become: true
+  systemd:
+    name: blueberry
+    state: started
+    enabled: true

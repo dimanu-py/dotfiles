@@ -34,4 +34,16 @@
       - curl
       - inetutils
       - plocate
+      - btop
+      - usage
+      - fastfetch
+      - inxi
 
+- name: Set zsh as default shell
+  ansible.builtin.user:
+    name: "{{ user }}"
+    shell: /usr/bin/zsh
+
+- name: Apply custom dotfiles for terminal
+  become: false
+  command: stow --adopt bat zsh kitty starship ghostty

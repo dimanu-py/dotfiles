@@ -1,0 +1,71 @@
+- name: File manager
+  community.general.yay:
+    name:
+      - nautilus
+      - sushi # File pre-visualizer
+
+- name: File sender
+  community.general.yay:
+    name:
+      - localsend-bin # Send files to other devices
+
+- name: PDF viewer
+  community.general.yay:
+    name:
+      - evince
+      - xouranlapp # Take notes on PDFs
+
+- name: USB
+  pacman:
+    name:
+      - udiskie
+      - ntfs-3g
+
+- name: Disk management
+  community.general.yay:
+    name:
+      - gnome-disk-utility
+
+- name: Banner generator
+  community.general.yay:
+    name:
+      - ffmpegthumbnailer
+
+- name: Markdown editor
+  community.generla.yay:
+    name:
+      - typora
+
+- name: Office suite
+  community.general.yay:
+    name:
+      - libreoffice
+
+- name: Printer
+  pacman:
+    name:
+      - cups
+      - cups-pdf
+      - cups-filters
+      - system-config-printer
+
+- name: Install fonts
+  pacman:
+    name:
+      - ttf-font-awesome
+      - ttf-cascadia-mono-nerd
+      - noto-fonts
+      - noto-fonts-emoji
+      - ttf-jetbrains-mono-nerd
+      - noto-fonts-cjk
+      - noto-fonts-extra
+      - ttf-ia-writer
+      - woff2-font-awesome
+      - fontconfig
+
+- name: Enable printer service
+  become: true
+  systemd:
+    name: cups
+    state: started
+    enabled: yes

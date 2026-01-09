@@ -1,8 +1,0 @@
-- name: Clone dotfiles
-  become: false
-  git:
-    repo: https://github.com/dimanu-py/dotfiles.git
-    version: main
-    dest: "{{ home }}/.dotfiles"
-    clone: yes
-    update: yes

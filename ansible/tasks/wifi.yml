@@ -1,0 +1,13 @@
+- name: Wifi
+  pacman:
+    name:
+      - iwd
+      - whois # Domain lookup tool
+      - impala # TUI for managing Wifi connection
+
+- name: Enable iwd service
+  become: true
+  systemd:
+    name: iwd
+    state: started
+    enabled: true

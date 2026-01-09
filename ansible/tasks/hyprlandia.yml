@@ -1,0 +1,46 @@
+- name: Install hyprland packages
+  community.general.yay:
+    name:
+      - hyprland # Tiling window manager
+      - hyprland-guiutils # GUI utilities
+      - hypridle # Idle after certain time
+      - hyprlock # Lock screen
+      - hyprpicker # Color picker
+      - hyprsunset # To set nigthmode
+      - waybar # Status bar
+      - mako # Notifications daemon
+      - swaybg # Set wallpaper
+      - swayosd # OSD server to show volume, bright indications
+      - uwsm # Wayland session manager
+      - hyprshot # Take screenshots
+      - xdg-desktop-portal-hyprland # Hyprland portal backend
+      - xdg-desktop-portal-gtk # GTK portal backend
+      - xdg-terminal-exec # Terminal execution handler
+      - qt5-wayland # Qt5 wayland support
+      - qt6-waylan # Qt6 wayland support
+      - wl-clipboard # Wayland clipboard utilities
+      - wl-clip-persist # Clipboard manager
+
+- name: App launcher
+  community.general.yay:
+    name:
+      - walker-bin
+      - walker-bin-debug
+
+- name: App launcher backend
+  community.general.yay:
+    name:
+      - elephant
+      - elephant-calc
+      - elephant-clipboard
+      - elephant-bluetooth
+      - elephant-desktopapplications
+      - elephant-files
+      - elephant-menus
+      - elephant-providerlist
+      - elephant-runner
+      - elephant-unicode
+      - elephant-symbols
+      - elephant-websearch
+      - elephant-todo
+      - libqalculate
