@@ -27,3 +27,7 @@ zsh_greeting() {
     echo "💡 $quote"
     echo
 }
+
+if [[ -o interactive ]]; then
+    zsh_greeting
+fi

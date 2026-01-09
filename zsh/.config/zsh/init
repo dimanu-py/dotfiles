@@ -1,7 +1,4 @@
 source $HOME/.config/zsh/greeting.zsh
-if [[ -o interactive ]]; then
-    zsh_greeting
-fi
 
 if command -v mise &> /dev/null; then
     eval "$(mise activate zsh)"
