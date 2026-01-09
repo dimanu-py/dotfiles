@@ -1,9 +1,10 @@
-# Changes require a restart to take effect.
-export OMARCHY_PATH=$HOME/.local/share/omarchy
-export PATH=$OMARCHY_PATH/bin:$PATH
+# Ensure custom bin is in path
+export PATH=$HOME/.local/bin:$PATH
 
-# Set default terminal and editor
+# Set default terminal
 source ~/.config/uwsm/default
 
 # Activate mise if present on the system
-omarchy-cmd-present mise && eval "$(mise activate bash)"
+# if [[ command -v mise &>/dev/null ]]; then
+#     eval "$(mise activate zsh)"
+# fi
